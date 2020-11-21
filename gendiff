@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+rm -Rf _output
+mkdir _output
+cd $scriptdir/_output
+workdir=$(pwd)
+
+falco_release=$(curl https://api.github.com/repos/falcosecurity/falco/releases/latest | jq -M -r '.tag_name')
+
+curl -L -o falco.tar.gz "https://dl.bintray.com/falcosecurity/bin/x86_64/falco-${falco_release}-x86_64.tar.gz"
+
+tar -xvf falco.tar.gz
+cd "falco-${falco_release}-x86_64"
+
+cd usr/src/falco*
+
+grep -oh "__NR_\w*" syscall_table.c  | grep -v ia32 | sed -e "s/__NR_//" | sort | uniq > $workdir/falco_syscalls.txt
+
+cd $workdir
+
+curl https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/plain/include/linux/syscalls.h > syscalls.h
+
+grep "asmlinkage long sys_" syscalls.h | awk '{print $3}' | sed -e "s/^sys_//" | sed -e "s/(/ /g" | awk '{print $1}' | sort | uniq > $workdir/kernel_next_syscalls.txt
+
+$scriptdir/diff -m falco_syscalls.txt kernel_next_syscalls.txt > $workdir/index.html

@@ -1,0 +1,22 @@
+name: diff
+
+on:
+  schedule:
+    - cron:  '*/15 * * * *'
+
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Create diff
+        run: |
+          ./gendiff
+      - uses: actions/upload-artifact@v2
+        name: Upload artifacts
+        with:
+          name: index
+          path: _output/index.html
