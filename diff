@@ -5,6 +5,7 @@ import os
 import difflib
 import argparse
 from datetime import datetime, timezone
+from string import Template
 
 
 def file_mtime(path):
@@ -48,8 +49,16 @@ def main():
     elif options.n:
         diff = difflib.ndiff(fromlines, tolines)
     elif options.m:
-        diff = difflib.HtmlDiff().make_file(fromlines, tolines, fromfile,
+        diff = difflib.HtmlDiff().make_table(fromlines, tolines, fromfile,
                                             tofile, context=options.c, numlines=n)
+        data = {
+            'difftable': diff,
+            'time': datetime.now().strftime("%I:%M%p on %B %d, %Y"),
+        }
+
+        with open('template.html', 'r') as f:
+            src = Template(f.read())
+            diff = src.substitute(data)
     else:
         diff = difflib.context_diff(
             fromlines, tolines, fromfile, tofile, fromdate, todate, n=n)

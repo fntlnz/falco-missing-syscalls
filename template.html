@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Falco missing syscalls - by fntlnz</title>
+	<link rel="stylesheet" href='https://fntlnz.wtf/css/style.css'>
+	<style type="text/css">
+		table.diff {
+			font-family: Courier;
+			border: medium;
+		}
+
+		.diff_header {
+			background-color: #e0e0e0
+		}
+
+		td.diff_header {
+			text-align: right
+		}
+
+		.diff_next {
+			background-color: #c0c0c0
+		}
+
+		.diff_add {
+			background-color: #aaffaa
+		}
+
+		.diff_chg {
+			background-color: #ffff77
+		}
+
+		.diff_sub {
+			background-color: #ffaaaa
+		}
+		.container {
+			max-width: 1500px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<section id="main">
+			<header class="topBar">Falco missing syscalls</header>
+			<section class="lorenzo-pic">
+				by <a href="https://twitter.com/fntlnz">@fntlnz</a>
+			</section>
+			<article>
+				<section id="content">
+					<h2>What is this?</h2>
+					the kernel is a constantly evolving project and syscalls are added at every release.
+					Falco is heavily based on syscalls and if you want to do a contribution, adding support for a syscall is
+					always
+					a good thing to do!
+					<h2>diff</h2>
+					On the left, the syscalls supported by the <a href="https://github.com/falcosecurity/falco/releases/latest">latest release of Falco</a>.
+
+					On the right the current syscalls implemented in the <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/include/linux/syscalls.h">linux-next tree</a>.
+
+					$difftable
+
+					<h2>meta</h2>
+					This page is updated every 15 minutes, hopefully - generated at $time
+				</section>
+			</article>
+		</section>
+	</div>
+</body>
+
+</html>

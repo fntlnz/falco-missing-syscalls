@@ -24,4 +24,5 @@ curl https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/plain/i
 grep "asmlinkage long sys_" syscalls.h | awk '{print $3}' | sed -e "s/^sys_//" | sed -e "s/(/ /g" | awk '{print $1}' | sort | uniq > $workdir/kernel_next_syscalls.txt
 
 mkdir $workdir/http
-$scriptdir/diff -m falco_syscalls.txt kernel_next_syscalls.txt > $workdir/http/index.html
+cd $scriptdir
+./diff -m $workdir/falco_syscalls.txt $workdir/kernel_next_syscalls.txt > $workdir/http/index.html
