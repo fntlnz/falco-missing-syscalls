@@ -1,5 +1,7 @@
 # Falco missing syscalls
 
+Generated page: https://falco-missing-syscalls.fntlnz.wtf/
+
 Every 15 minutes, this repository gets the current release Falco
 and compares it to the current [linux-next](https://www.kernel.org/doc/man-pages/linux-next.html)
 repository to render a diff of the current syscalls not supported by Falco.
