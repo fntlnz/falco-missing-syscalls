@@ -1,31 +1,75 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta http-equiv="Content-Type"
-          content="text/html; charset=utf-8" />
-    <title></title>
-    <style type="text/css">
-        table.diff {font-family:Courier; border:medium;}
-        .diff_header {background-color:#e0e0e0}
-        td.diff_header {text-align:right}
-        .diff_next {background-color:#c0c0c0}
-        .diff_add {background-color:#aaffaa}
-        .diff_chg {background-color:#ffff77}
-        .diff_sub {background-color:#ffaaaa}
-    </style>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Falco missing syscalls - by fntlnz</title>
+	<link rel="stylesheet" href='https://fntlnz.wtf/css/style.css'>
+	<style type="text/css">
+		table.diff {
+			font-family: Courier;
+			border: medium;
+		}
+
+		.diff_header {
+			background-color: #e0e0e0
+		}
+
+		td.diff_header {
+			text-align: right
+		}
+
+		.diff_next {
+			background-color: #c0c0c0
+		}
+
+		.diff_add {
+			background-color: #aaffaa
+		}
+
+		.diff_chg {
+			background-color: #ffff77
+		}
+
+		.diff_sub {
+			background-color: #ffaaaa
+		}
+		.container {
+			max-width: 1500px;
+		}
+	</style>
 </head>
 
 <body>
-    
+	<div class="container">
+		<section id="main">
+			<header class="topBar">Falco missing syscalls</header>
+			<section class="lorenzo-pic">
+				by <a href="https://twitter.com/fntlnz">@fntlnz</a>
+			</section>
+			<article>
+				<section id="content">
+					<h2>What is this?</h2>
+					the kernel is a constantly evolving project and syscalls are added at every release.
+					Falco is heavily based on syscalls and if you want to do a contribution, adding support for a syscall is
+					always
+					a good thing to do!
+					<br>
+					Syscall fillers are a crucial part to implement to avoid Falco bypasses as much as possible.
+					This page is inspired by <a href="https://kccncna20.sched.com/event/ekE4/bypass-falco-leonardo-di-donato-sysdig">the talk "Bypass Falco"</a> that <a href="https://twitter.com/leodido">@leodido</a> gave at Kubecon Virtual NA, specifically the <a href="https://www.youtube.com/watch?v=WLZN2HVUnl4">support missing syscalls</a> part of it.
+					<h2>diff</h2>
+					On the left, the syscalls supported by the <a href="https://github.com/falcosecurity/falco/releases/latest">latest release of Falco</a>.
+
+					On the right the current syscalls implemented in the <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/include/linux/syscalls.h">linux-next tree</a>.
+					<br>
+					Text only version <a href="index.diff">here</a>.
+
+					
     <table class="diff" id="difflib_chg_to0__top"
            cellspacing="0" cellpadding="0" rules="groups" >
         <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
         <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
-        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">falco_syscalls.txt</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">kernel_next_syscalls.txt</th></tr></thead>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">/home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">/home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt</th></tr></thead>
         <tbody>
             <tr><td class="diff_next" id="difflib_chg_to0__0"><a href="#difflib_chg_to0__1">n</a></td><td class="diff_header" id="from0_1">1</td><td nowrap="nowrap"><span class="diff_sub">Linux</span></td><td class="diff_next"><a href="#difflib_chg_to0__1">n</a></td><td class="diff_header" id="to0_1">1</td><td nowrap="nowrap"><span class="diff_add">##sname</span></td></tr>
             <tr><td class="diff_next"></td><td class="diff_header" id="from0_2">2</td><td nowrap="nowrap"><span class="diff_sub">_llseek</span></td><td class="diff_next"></td><td class="diff_header"></td><td nowrap="nowrap"></td></tr>
@@ -481,21 +525,13 @@
             <tr><td class="diff_next"></td><td class="diff_header" id="from0_359">359</td><td nowrap="nowrap">writev</td><td class="diff_next"></td><td class="diff_header" id="to0_431">431</td><td nowrap="nowrap">writev</td></tr>
         </tbody>
     </table>
-    <table class="diff" summary="Legends">
-        <tr> <th colspan="2"> Legends </th> </tr>
-        <tr> <td> <table border="" summary="Colors">
-                      <tr><th> Colors </th> </tr>
-                      <tr><td class="diff_add">&nbsp;Added&nbsp;</td></tr>
-                      <tr><td class="diff_chg">Changed</td> </tr>
-                      <tr><td class="diff_sub">Deleted</td> </tr>
-                  </table></td>
-             <td> <table border="" summary="Links">
-                      <tr><th colspan="2"> Links </th> </tr>
-                      <tr><td>(f)irst change</td> </tr>
-                      <tr><td>(n)ext change</td> </tr>
-                      <tr><td>(t)op</td> </tr>
-                  </table></td> </tr>
-    </table>
+
+					<h2>meta</h2>
+					This page is updated every 15 minutes, hopefully - generated at 12:25PM on November 21, 2020
+				</section>
+			</article>
+		</section>
+	</div>
 </body>
 
 </html>
