@@ -54,10 +54,15 @@
 					Falco is heavily based on syscalls and if you want to do a contribution, adding support for a syscall is
 					always
 					a good thing to do!
+					<br>
+					Syscall fillers are a crucial part to implement to avoid Falco bypasses as much as possible.
+					This page is inspired by <a href="https://kccncna20.sched.com/event/ekE4/bypass-falco-leonardo-di-donato-sysdig">the talk "Bypass Falco"</a> that <a href="https://twitter.com/leodido">@leodido</a> gave at Kubecon Virtual NA, specifically the <a href="https://www.youtube.com/watch?v=WLZN2HVUnl4">support missing syscalls</a> part of it.
 					<h2>diff</h2>
 					On the left, the syscalls supported by the <a href="https://github.com/falcosecurity/falco/releases/latest">latest release of Falco</a>.
 
 					On the right the current syscalls implemented in the <a href="https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/include/linux/syscalls.h">linux-next tree</a>.
+					<br>
+					Text only version <a href="index.diff">here</a>.
 
 					$difftable
 

@@ -25,4 +25,6 @@ grep "asmlinkage long sys_" syscalls.h | awk '{print $3}' | sed -e "s/^sys_//" |
 
 mkdir $workdir/http
 cd $scriptdir
+
 ./diff -m $workdir/falco_syscalls.txt $workdir/kernel_next_syscalls.txt > $workdir/http/index.html
+./diff $workdir/falco_syscalls.txt $workdir/kernel_next_syscalls.txt > $workdir/http/index.diff
