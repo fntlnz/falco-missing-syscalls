@@ -28,3 +28,5 @@ jobs:
           BRANCH: gh-pages
           FOLDER: _output/http
           CLEAN: true
+          GIT_CONFIG_EMAIL: 21696493+fntlnzbot@users.noreply.github.com
+          GIT_CONFIG_NAME: fntlnzbot
