@@ -1,5 +1,5 @@
-*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2020-11-24T06:48:46.024182+00:00
---- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2020-11-24T06:48:46.244181+00:00
+*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2020-11-24T07:08:21.444031+00:00
+--- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2020-11-24T07:08:21.700042+00:00
 ***************
 *** 1,14 ****
 ! Linux
@@ -218,7 +218,7 @@
   mq_unlink
   mremap
   msgctl
---- 161,198 ----
+--- 161,197 ----
   listxattr
   llistxattr
   llseek
@@ -232,7 +232,6 @@
 + mbind
 + membarrier
 + memfd_create
-+ memfd_secret
 + migrate_pages
   mincore
   mkdir
@@ -259,7 +258,7 @@
   msgctl
 ***************
 *** 173,213 ****
---- 203,267 ----
+--- 202,266 ----
   munlock
   munlockall
   munmap
@@ -327,7 +326,7 @@
   readv
 ***************
 *** 215,220 ****
---- 269,275 ----
+--- 268,274 ----
   recv
   recvfrom
   recvmmsg
@@ -358,7 +357,7 @@
   sched_setparam
   sched_setscheduler
   sched_yield
---- 279,303 ----
+--- 278,302 ----
   request_key
   restart_syscall
   rmdir
@@ -400,7 +399,7 @@
   set_tid_address
   setdomainname
   setfsgid
---- 306,321 ----
+--- 305,320 ----
   semctl
   semget
   semop
@@ -426,7 +425,7 @@
   setgroups
   setgroups16
   sethostname
---- 324,329 ----
+--- 323,328 ----
 ***************
 *** 275,284 ****
   setregid16
@@ -439,7 +438,7 @@
   setreuid
   setreuid16
   setrlimit
---- 335,342 ----
+--- 334,341 ----
 ***************
 *** 287,359 ****
   settimeofday
@@ -515,7 +514,7 @@
   waitpid
   write
   writev
---- 345,431 ----
+--- 344,430 ----
   settimeofday
   setuid
   setuid16
