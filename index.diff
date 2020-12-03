@@ -1,5 +1,5 @@
-*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2020-12-03T09:40:21.104736+00:00
---- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2020-12-03T09:40:21.328737+00:00
+*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2020-12-03T09:48:29.081777+00:00
+--- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2020-12-03T09:48:29.293815+00:00
 ***************
 *** 1,14 ****
 ! Linux
@@ -54,8 +54,13 @@
   delete_module
   dup
 ***************
-*** 41,52 ****
---- 47,62 ----
+*** 37,52 ****
+--- 43,63 ----
+  epoll_create1
+  epoll_ctl
+  epoll_pwait
++ epoll_pwait2
+  epoll_wait
   eventfd
   eventfd2
   execve
@@ -74,7 +79,7 @@
   fchmodat
 ***************
 *** 62,68 ****
---- 72,82 ----
+--- 73,83 ----
   flock
   fork
   fremovexattr
@@ -113,7 +118,7 @@
   getitimer
   getpeername
   getpgid
---- 84,109 ----
+--- 85,110 ----
   fstatfs64
   fsync
   ftruncate
@@ -152,7 +157,7 @@
   getrlimit
   getrusage
   getsid
---- 114,121 ----
+--- 115,122 ----
 ***************
 *** 112,118 ****
   gettimeofday
@@ -162,10 +167,10 @@
   getxattr
   init_module
   inotify_add_watch
---- 125,130 ----
+--- 126,131 ----
 ***************
 *** 122,133 ****
---- 134,154 ----
+--- 135,155 ----
   io_cancel
   io_destroy
   io_getevents
@@ -218,7 +223,7 @@
   mq_unlink
   mremap
   msgctl
---- 161,197 ----
+--- 162,198 ----
   listxattr
   llistxattr
   llseek
@@ -258,7 +263,7 @@
   msgctl
 ***************
 *** 173,213 ****
---- 202,266 ----
+--- 203,267 ----
   munlock
   munlockall
   munmap
@@ -326,7 +331,7 @@
   readv
 ***************
 *** 215,220 ****
---- 268,274 ----
+--- 269,275 ----
   recv
   recvfrom
   recvmmsg
@@ -357,7 +362,7 @@
   sched_setparam
   sched_setscheduler
   sched_yield
---- 278,302 ----
+--- 279,303 ----
   request_key
   restart_syscall
   rmdir
@@ -399,7 +404,7 @@
   set_tid_address
   setdomainname
   setfsgid
---- 305,320 ----
+--- 306,321 ----
   semctl
   semget
   semop
@@ -425,7 +430,7 @@
   setgroups
   setgroups16
   sethostname
---- 323,328 ----
+--- 324,329 ----
 ***************
 *** 275,284 ****
   setregid16
@@ -438,7 +443,7 @@
   setreuid
   setreuid16
   setrlimit
---- 334,341 ----
+--- 335,342 ----
 ***************
 *** 287,359 ****
   settimeofday
@@ -514,7 +519,7 @@
   waitpid
   write
   writev
---- 344,430 ----
+--- 345,431 ----
   settimeofday
   setuid
   setuid16
