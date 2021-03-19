@@ -1,5 +1,5 @@
-*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2021-03-19T06:37:49.957497+00:00
---- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2021-03-19T06:37:50.205499+00:00
+*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2021-03-19T06:57:45.035336+00:00
+--- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2021-03-19T06:57:45.207349+00:00
 ***************
 *** 1,14 ****
 ! Linux
@@ -169,8 +169,8 @@
   inotify_add_watch
 --- 126,131 ----
 ***************
-*** 122,133 ****
---- 135,155 ----
+*** 122,136 ****
+--- 135,161 ----
   io_cancel
   io_destroy
   io_getevents
@@ -192,6 +192,12 @@
   kexec_load
   keyctl
   kill
++ landlock_add_rule
++ landlock_create_ruleset
++ landlock_restrict_self
+  lchown
+  lchown16
+  lgetxattr
 ***************
 *** 140,168 ****
   listxattr
@@ -223,7 +229,7 @@
   mq_unlink
   mremap
   msgctl
---- 162,200 ----
+--- 165,203 ----
   listxattr
   llistxattr
   llseek
@@ -265,7 +271,7 @@
   msgctl
 ***************
 *** 173,213 ****
---- 205,270 ----
+--- 208,273 ----
   munlock
   munlockall
   munmap
@@ -334,7 +340,7 @@
   readv
 ***************
 *** 215,220 ****
---- 272,278 ----
+--- 275,281 ----
   recv
   recvfrom
   recvmmsg
@@ -365,7 +371,7 @@
   sched_setparam
   sched_setscheduler
   sched_yield
---- 282,306 ----
+--- 285,309 ----
   request_key
   restart_syscall
   rmdir
@@ -407,7 +413,7 @@
   set_tid_address
   setdomainname
   setfsgid
---- 309,324 ----
+--- 312,327 ----
   semctl
   semget
   semop
@@ -433,7 +439,7 @@
   setgroups
   setgroups16
   sethostname
---- 327,332 ----
+--- 330,335 ----
 ***************
 *** 275,284 ****
   setregid16
@@ -446,7 +452,7 @@
   setreuid
   setreuid16
   setrlimit
---- 338,345 ----
+--- 341,348 ----
 ***************
 *** 287,354 ****
   settimeofday
@@ -517,7 +523,7 @@
   vfork
   vhangup
   vmsplice
---- 348,428 ----
+--- 351,431 ----
   settimeofday
   setuid
   setuid16
