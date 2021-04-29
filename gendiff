@@ -8,7 +8,7 @@ workdir=$(pwd)
 
 falco_release=$(curl https://api.github.com/repos/falcosecurity/falco/releases/latest | jq -M -r '.tag_name')
 
-curl -L -o falco.tar.gz "https://dl.bintray.com/falcosecurity/bin/x86_64/falco-${falco_release}-x86_64.tar.gz"
+curl -L -o falco.tar.gz "https://download.falco.org/packages/bin/x86_64/falco-${falco_release}-x86_64.tar.gz"
 
 tar -xvf falco.tar.gz
 cd "falco-${falco_release}-x86_64"
