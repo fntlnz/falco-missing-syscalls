@@ -1,5 +1,5 @@
-*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2021-06-22T10:52:15.502854+00:00
---- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2021-06-22T10:52:15.702857+00:00
+*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2021-06-22T11:09:13.728611+00:00
+--- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2021-06-22T11:09:13.940620+00:00
 ***************
 *** 1,14 ****
 ! Linux
@@ -454,7 +454,7 @@
   setrlimit
 --- 341,348 ----
 ***************
-*** 287,354 ****
+*** 287,345 ****
   settimeofday
   setuid
   setuid16
@@ -514,16 +514,7 @@
   uname
   unlink
   unlinkat
-  unshare
-  uselib
-  ustat
-  utime
-  utimensat
-  utimes
-  vfork
-  vhangup
-  vmsplice
---- 351,431 ----
+--- 351,418 ----
   settimeofday
   setuid
   setuid16
@@ -592,9 +583,10 @@
   uname
   unlink
   unlinkat
-  unshare
-  uselib
-+ userfaultfd
+***************
+*** 348,355 ****
+--- 421,431 ----
+  userfaultfd
   ustat
   utime
 + utime32
