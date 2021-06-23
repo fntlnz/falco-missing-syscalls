@@ -1,5 +1,5 @@
-*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2021-06-23T08:32:40.302001+00:00
---- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2021-06-23T08:32:40.682023+00:00
+*** /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/falco_syscalls.txt	2021-06-23T08:48:33.533648+00:00
+--- /home/runner/work/falco-missing-syscalls/falco-missing-syscalls/_output/kernel_next_syscalls.txt	2021-06-23T08:48:33.685668+00:00
 ***************
 *** 1,14 ****
 ! Linux
